@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع الأخبار - الرئيسية</title>
+  <script src="c:\Users\ce pc\Desktop\jquery-3.7.1.js.js"></script>
+  <script>
+    $(document).ready(function () {
+  $("nav ul li a").click(function (e) {
+    e.preventDefault();
+    const target = $(this).attr("href");
+    $("html, body").animate(
+      {
+        scrollTop: $(target).offset().top,
+      },
+      1000
+    );
+  });
+});
+
+  </script>
+
+
+
+ <style>
+    /* عام */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* الهيدر */
+header {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* الأخبار */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.news-grid article {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.news-grid article img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+ </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>موقع الأخبار</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="politics.html">سياسة</a></li>
+          <li><a href="sports.html">رياضة</a></li>
+          <li><a href="culture.html">ثقافة</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="breaking-news">
+    <div class="container">
+      <p>عاجل: هذا نص إخباري يتحدث عن الأحداث الجارية...</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <h2>أهم الأخبار</h2>
+      <div class="news-grid">
+        <article>
+          <img src="news1.jpg" alt="خبر 1">
+          <h3><a href="politics.html">خبر سياسي</a></h3>
+          <p>تفاصيل الخبر السياسي...</p>
+        </article>
+        <article>
+          <img src="news2.jpg" alt="خبر 2">
+          <h3><a href="sports.html">خبر رياضي</a></h3>
+          <p>تفاصيل الخبر الرياضي...</p>
+        </article>
+        <article>
+          <img src="news3.jpg" alt="خبر 3">
+          <h3><a href="culture.html">خبر ثقافي</a></h3>
+          <p>تفاصيل الخبر الثقافي...</p>
+        </article>
+      </div>
+    </div>
+  </main>
+  
+  <main>
+    <div class="container">
+      <h2>أهم الأخبار</h2>
+      <div class="news-grid">
+        <article>
+          <img src="news1.jpg" alt="خبر 1">
+          <h3><a href="politics.html">خبر سياسي</a></h3>
+          <p>تفاصيل الخبر السياسي...</p>
+        </article>
+        <article>
+          <img src="news2.jpg" alt="خبر 2">
+          <h3><a href="sports.html">خبر رياضي</a></h3>
+          <p>تفاصيل الخبر الرياضي...</p>
+        </article>
+        <article>
+          <img src="news3.jpg" alt="خبر 3">
+          <h3><a href="culture.html">خبر ثقافي</a></h3>
+          <p>تفاصيل الخبر الثقافي...</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="container">
+      <p>© 2024 جميع الحقوق محفوظة - موقع الأخبار</p>
+    </div>
+  </footer>
+
+</body>
+</html>
